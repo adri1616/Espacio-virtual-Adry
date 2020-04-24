@@ -1,0 +1,60 @@
+
+.boton_desplegar:hover{
+text-decoration: underline;
+}
+.menu_despegable{
+	float: left;
+	overflow: hidden;/*especifica si se debe recortar el contenido o agragar barra
+	de desplazamiento cuando el contenido de un elemento es demasiado grande*/
+	position: fixed;
+}
+.menu_despegable, .boton_desplegar{
+	cursor: pointer;/*permite seleccionar un puntero(flecha,mano,relog de arena,ect)*/
+	font-size: 15px;/*tamaño de la fuente*/
+	font-weight: 300;
+	padding: 10px 10px 0 0;
+	border:none;
+	outline: none;/*establece algunas o todas las propiedades de todos los perfiles*/
+	color: white;
+	background-color: rgba(0,0,0,0);
+	margin: 0;/*margen*/
+}
+.contenido_despegable{
+	width: 40px;
+	position: fixed;
+	transform: translateX(1050px);
+	display: none; /*display:tipo de caja*/
+	/*position: absolute;/*modo de posicionamiento*/
+	background-color:white;
+	min-width: 160px;/*define el ancho minimo de un elemento*/
+	box-shadow: 0px 8px 16px 0px rgba(255,25,117,0.9);
+	z-index: 1;/*apilamiento*/
+}
+.contenido_despegable a{
+	float: none;/*float: especifica si un elemento debe salir del flujo normal*/
+	color: black;
+	padding: 12px 16px;/*es la distancia desde el borde de un elemento hasta su contenido*/
+	text-decoration: none;/*decoracion del texto*/
+	display: block;/*display:tipo de caja*/
+	text-align: center; /*alineacion del texto*/
+}
+.contenido_despegable a:hover{
+	background-color: lightpink;
+}
+.mostrar{
+	display: block;/*display:tipo de caja*/
+}
+@media screen and (max-width: 900px){
+	.contenido_despegable{
+	width: 25px;
+	position: fixed;
+	transform: translateX(500px);
+}
+	}
+	@media screen and (max-width: 500px){
+	.contenido_despegable{
+	width: 15px;
+	position: fixed;
+	transform: translateX(200px);
+}
+	}
